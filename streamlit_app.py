@@ -5,8 +5,6 @@ import seaborn as sns
 
 st.title("CORD-19 Metadata Explorer")
 
-import streamlit as st
-import pandas as pd
 
 @st.cache_data
 def load_data():
