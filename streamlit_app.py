@@ -5,13 +5,17 @@ import seaborn as sns
 
 st.title("CORD-19 Metadata Explorer")
 
-# --- Load Data ---
+import streamlit as st
+import pandas as pd
+
 @st.cache_data
 def load_data():
-    # if the CSV is in the same repo folder
-    return pd.read_csv("cord19_cleaned_sample.csv")
+    url = 'https://drive.google.com/uc?export=download&id=1xNK8OfdT33pR-hQKB2wlKemQDSGBBWd9'
+    return pd.read_csv(url)
 
 df = load_data()
+st.dataframe(df.head())
+
 
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
