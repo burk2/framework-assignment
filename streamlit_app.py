@@ -5,7 +5,7 @@ import seaborn as sns
 from typing import Optional
 
 st.set_page_config(layout="wide")
-st.title("CORD-19 Metadata Explorer (robust loader)")
+st.title("COVID-19 Metadata Explorer (robust loader)")
 
 # ----- load data (optionally limit rows to avoid huge downloads) -----
 @st.cache_data
